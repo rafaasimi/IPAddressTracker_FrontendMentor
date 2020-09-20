@@ -1,0 +1,157 @@
+/* Reset CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --text-light: #FFFFFF;
+    --text-very-dark-grey: #2b2b2b;
+    --text-dark-grey: #969696;
+    --button-very-dark-background: #000000;
+    --button-dark-background: #3F3F3F;
+    --background-light: #FFFFFF;
+    --background-blue: #4846A3;
+    --color-separator: #D9D9D9;
+}
+
+
+header {
+    background-image: url(../images/pattern-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 0 130px 0;
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    margin-right: 25px;
+    margin-left: 25px;
+    justify-content: center;
+}
+
+input[type=text] {
+    max-width: 500px;
+    width: 100%;
+    height: 58px;
+    border-radius: 14px 0 0 14px;
+    font-size: 18px;
+    color: var(--text-very-dark-grey);
+    padding: 0 25px;
+}
+
+button {
+    width: 58px;
+    height: 58px;
+    background-color: var(--button-very-dark-background);
+    border-radius: 0 14px 14px 0;
+    transition: background .3s;
+}
+
+button:hover {
+    background-color: var(--button-dark-background);
+    cursor: pointer;
+}
+
+section {
+    background-color: var(--background-blue);
+    position: relative;
+}
+
+section .card-results {
+    margin: -85px auto;
+    background-color: var(--background-light);
+    border-radius: 14px;
+    padding: 40px 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 1110px;
+    z-index: 10;
+}
+
+section .results {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section .results div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+section .results h3 {
+    font-size: 0.75rem;
+    color: var(--text-dark-grey);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+section .results span {
+    display: block;
+    max-width: 180px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-very-dark-grey);
+    letter-spacing: 1px;
+}
+
+section .results .separator {
+    width: 1px;
+    height: 75px;
+    background-color: var(--color-separator);
+    margin: 0 30px 0 60px;
+}
+
+section .map {
+    display: block;
+    width: 100%;
+    height: 70.5vh;
+    background-color: #969696;
+}
+
+section #mapid {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 950px) {
+    section .results {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section .card-results {
+        position: initial;
+        margin-bottom: 30px;
+    }
+
+    section .results .separator {
+        width: 75px;
+        height: 1px;
+        background-color: var(--color-separator);
+        margin: 15px 0 ;
+    }
+}

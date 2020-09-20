@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Tracker</title>
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>IP Address Tracker</h1>
+
+            <form method="post">
+                <input type="text" placeholder="Search for any IP address or domain">
+                <button type="submit"><img src="/images/icon-arrow.svg" alt=""></button>
+            </form>
+        </header>
+
+        <section>
+            <div class="card-results">
+                <div class="results">
+                    <div data-ipaddress>
+                        <h3>Ip Address</h3>
+                        <span>-</span>
+                    </div>
+                    <span class="separator"></span>
+                    <div data-location>
+                        <h3>Location</h3>
+                        <span>-</span>
+                    </div>
+                    <span class="separator"></span>
+                    <div data-timezone>
+                        <h3>Timezone</h3>
+                        <span>-</span>
+                    </div>
+                    <span class="separator"></span>
+                    <div data-isp>
+                        <h3>ISP</h3>
+                        <span>-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map">
+                <div id="mapid"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script type="module" src="/js/scripts.js"></script>
+
+</body>
+
+</html>
